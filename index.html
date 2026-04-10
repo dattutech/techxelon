@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Techxelon –  Accelerate your Business</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>Techxelon – Accelerate your business</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,6 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="logo">Tech<span>X</span>elon</a>
   <ul class="nav-links">
@@ -22,15 +21,24 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get Started</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#process" onclick="toggleMenu()">Process</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
   <div class="orb orb3"></div>
-
-  <div class="hero-badge">Hyderabad's Next-Gen IT Studio</div>
+  <div class="hero-badge"> Next-Gen IT Studio</div>
   <h1>
     We Build Digital
     <span class="line2">Experiences</span>
@@ -45,22 +53,10 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat">
-    <div class="stat-num">5+</div>
-    <div class="stat-label">Projects Delivered</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">3x</div>
-    <div class="stat-label">Avg. Client Growth</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">98%</div>
-    <div class="stat-label">Satisfaction Rate</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">24h</div>
-    <div class="stat-label">Support Response</div>
-  </div>
+  <div class="stat"><div class="stat-num" id="s1">10+</div><div class="stat-label">Projects Delivered</div></div>
+  <div class="stat"><div class="stat-num" id="s2">3x</div><div class="stat-label">Avg. Client Growth</div></div>
+  <div class="stat"><div class="stat-num" id="s3">98%</div><div class="stat-label">Satisfaction Rate</div></div>
+  <div class="stat"><div class="stat-num" id="s4">24h</div><div class="stat-label">Support Response</div></div>
 </div>
 
 <!-- SERVICES -->
@@ -69,47 +65,29 @@
     <span class="section-tag reveal">What We Do</span>
     <h2 class="section-title reveal">Our Core Services</h2>
     <p class="section-sub reveal">We combine design, technology, and strategy to build solutions that work — and grow with you.</p>
-
     <div class="services-grid reveal">
-      <!-- Website Building -->
       <div class="service-card s1">
         <div class="service-icon">🌐</div>
         <h3>Website Building</h3>
         <p>We craft fast, responsive, and visually stunning websites tailored to your brand. From landing pages to full-scale web apps — we build for performance and conversion.</p>
         <div class="service-tags">
-          <span class="tag">React / Next.js</span>
-          <span class="tag">WordPress</span>
-          <span class="tag">E-Commerce</span>
-          <span class="tag">UI/UX Design</span>
-          <span class="tag">SEO Ready</span>
+          <span class="tag">React / Next.js</span><span class="tag">WordPress</span><span class="tag">E-Commerce</span><span class="tag">UI/UX Design</span><span class="tag">SEO Ready</span>
         </div>
       </div>
-
-      <!-- Digital Marketing -->
       <div class="service-card s2">
         <div class="service-icon">📈</div>
         <h3>Digital Marketing</h3>
         <p>Reach your audience where they are. We run data-driven campaigns across Google, Instagram, and LinkedIn to grow your brand, traffic, and revenue.</p>
         <div class="service-tags">
-          <span class="tag">SEO & SEM</span>
-          <span class="tag">Social Media</span>
-          <span class="tag">Google Ads</span>
-          <span class="tag">Content Strategy</span>
-          <span class="tag">Analytics</span>
+          <span class="tag">SEO & SEM</span><span class="tag">Social Media</span><span class="tag">Google Ads</span><span class="tag">Content Strategy</span><span class="tag">Analytics</span>
         </div>
       </div>
-
-      <!-- AI Automation -->
       <div class="service-card s3">
         <div class="service-icon">🤖</div>
         <h3>AI Automation</h3>
         <p>Eliminate repetitive work and scale effortlessly. We build custom AI workflows, chatbots, and automations that save time and unlock growth for your business.</p>
         <div class="service-tags">
-          <span class="tag">AI Chatbots</span>
-          <span class="tag">Workflow Automation</span>
-          <span class="tag">CRM Integration</span>
-          <span class="tag">Make / n8n</span>
-          <span class="tag">Custom AI Tools</span>
+          <span class="tag">AI Chatbots</span><span class="tag">Workflow Automation</span><span class="tag">CRM Integration</span><span class="tag">Make / n8n</span><span class="tag">Custom AI Tools</span>
         </div>
       </div>
     </div>
@@ -124,68 +102,19 @@
         <span class="section-tag reveal">Why Techxelon</span>
         <h2 class="section-title reveal">Built for Businesses That Mean Business</h2>
         <div class="why-items">
-          <div class="why-item reveal">
-            <div class="why-num">01</div>
-            <div>
-              <h4>Results-First Approach</h4>
-              <p>Every decision we make is tied to your business goals — not just aesthetics or vanity metrics.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-num">02</div>
-            <div>
-              <h4>End-to-End Execution</h4>
-              <p>From strategy to launch to growth — we handle everything so you don't have to manage multiple agencies.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-num">03</div>
-            <div>
-              <h4>Cutting-Edge Tech Stack</h4>
-              <p>We stay ahead of the curve with the latest in AI, web tech, and marketing tools to give you a competitive edge.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-num">04</div>
-            <div>
-              <h4>Transparent & Agile</h4>
-              <p>Regular updates, open communication, and flexible workflows tailored to your pace and preferences.</p>
-            </div>
-          </div>
+          <div class="why-item reveal"><div class="why-num">01</div><div><h4>Results-First Approach</h4><p>Every decision we make is tied to your business goals — not just aesthetics or vanity metrics.</p></div></div>
+          <div class="why-item reveal"><div class="why-num">02</div><div><h4>End-to-End Execution</h4><p>From strategy to launch to growth — we handle everything so you don't have to manage multiple agencies.</p></div></div>
+          <div class="why-item reveal"><div class="why-num">03</div><div><h4>Cutting-Edge Tech Stack</h4><p>We stay ahead of the curve with the latest in AI, web tech, and marketing tools to give you a competitive edge.</p></div></div>
+          <div class="why-item reveal"><div class="why-num">04</div><div><h4>Transparent & Agile</h4><p>Regular updates, open communication, and flexible workflows tailored to your pace and preferences.</p></div></div>
         </div>
       </div>
-
       <div class="visual-card reveal">
         <div class="vc-label">Performance Dashboard</div>
         <div class="vc-title">Client Results Overview</div>
-        <div class="vc-metric">
-          <span class="vc-metric-name">Website Traffic Growth</span>
-          <div style="display:flex;align-items:center;gap:1rem">
-            <div class="bar-wrap"><div class="bar-fill" style="width:85%;background:var(--accent)"></div></div>
-            <span class="vc-metric-val blue">+285%</span>
-          </div>
-        </div>
-        <div class="vc-metric">
-          <span class="vc-metric-name">Lead Generation</span>
-          <div style="display:flex;align-items:center;gap:1rem">
-            <div class="bar-wrap"><div class="bar-fill" style="width:72%;background:#a78bfa"></div></div>
-            <span class="vc-metric-val purple">+192%</span>
-          </div>
-        </div>
-        <div class="vc-metric">
-          <span class="vc-metric-name">Task Automation</span>
-          <div style="display:flex;align-items:center;gap:1rem">
-            <div class="bar-wrap"><div class="bar-fill" style="width:90%;background:var(--accent3)"></div></div>
-            <span class="vc-metric-val green">-70% Cost</span>
-          </div>
-        </div>
-        <div class="vc-metric">
-          <span class="vc-metric-name">ROI on Ad Spend</span>
-          <div style="display:flex;align-items:center;gap:1rem">
-            <div class="bar-wrap"><div class="bar-fill" style="width:80%;background:var(--accent)"></div></div>
-            <span class="vc-metric-val blue">4.2x ROAS</span>
-          </div>
-        </div>
+        <div class="vc-metric"><span class="vc-metric-name">Website Traffic Growth</span><div style="display:flex;align-items:center;gap:1rem"><div class="bar-wrap"><div class="bar-fill" style="width:85%;background:var(--accent)"></div></div><span class="vc-metric-val blue">+285%</span></div></div>
+        <div class="vc-metric"><span class="vc-metric-name">Lead Generation</span><div style="display:flex;align-items:center;gap:1rem"><div class="bar-wrap"><div class="bar-fill" style="width:72%;background:#a78bfa"></div></div><span class="vc-metric-val purple">+192%</span></div></div>
+        <div class="vc-metric"><span class="vc-metric-name">Task Automation</span><div style="display:flex;align-items:center;gap:1rem"><div class="bar-wrap"><div class="bar-fill" style="width:90%;background:var(--accent3)"></div></div><span class="vc-metric-val green">-70% Cost</span></div></div>
+        <div class="vc-metric"><span class="vc-metric-name">ROI on Ad Spend</span><div style="display:flex;align-items:center;gap:1rem"><div class="bar-wrap"><div class="bar-fill" style="width:80%;background:var(--accent)"></div></div><span class="vc-metric-val blue">4.2x ROAS</span></div></div>
       </div>
     </div>
   </div>
@@ -198,26 +127,10 @@
     <h2 class="section-title reveal">Simple. Structured. Successful.</h2>
     <p class="section-sub reveal">Our proven process ensures every project is delivered on time, on budget, and beyond expectations.</p>
     <div class="process-steps">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <h4>Discovery Call</h4>
-        <p>We understand your business, goals, and challenges through a focused strategy session.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <h4>Strategy & Planning</h4>
-        <p>We craft a custom roadmap with timelines, deliverables, and clear KPIs.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <h4>Design & Build</h4>
-        <p>Our team executes with precision — design, development, and automation in sync.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">04</div>
-        <h4>Launch & Grow</h4>
-        <p>We go live, monitor performance, and optimize continuously for growth.</p>
-      </div>
+      <div class="step reveal"><div class="step-num">01</div><h4>Discovery Call</h4><p>We understand your business, goals, and challenges through a focused strategy session.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h4>Strategy & Planning</h4><p>We craft a custom roadmap with timelines, deliverables, and clear KPIs.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h4>Design & Build</h4><p>Our team executes with precision — design, development, and automation in sync.</p></div>
+      <div class="step reveal"><div class="step-num">04</div><h4>Launch & Grow</h4><p>We go live, monitor performance, and optimize continuously for growth.</p></div>
     </div>
   </div>
 </section>
@@ -230,78 +143,35 @@
         <span class="section-tag reveal">Get In Touch</span>
         <h2 class="section-title reveal">Let's Build Something Great Together</h2>
         <p class="section-sub reveal">Tell us what you need. We'll get back to you within 24 hours with a clear plan.</p>
-
         <div class="contact-info reveal">
           <h3>Contact Details</h3>
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div>
-              <strong>Location</strong>
-              <p>Hyderabad, Telangana, India</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <div>
-              <strong>Email</strong>
-              <p>chandubittu@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">💬</div>
-            <div>
-              <strong>WhatsApp</strong>
-              <p>+91 7675929472
-            </div>
-          </div>
+          <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Location</strong><p>Hyderabad, Telangana, India</p></div></div>
+          <div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email</strong><p>Chandubittu77@gmail.com</p></div></div>
+          <div class="contact-item"><div class="contact-icon">💬</div><div><strong>WhatsApp</strong><p>7675929472</p></div></div>
         </div>
       </div>
-
       <div>
         <div class="contact-form reveal">
           <div class="form-row">
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" placeholder="Rahul">
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" placeholder="Sharma">
-            </div>
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="Rahul"></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
           </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="you@company.com">
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@company.com"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"></div>
+          <div class="form-group"><label>Service Needed</label>
+            <select><option value="">Select a service</option><option>Website Building</option><option>Digital Marketing</option><option>AI Automation</option><option>All Services / Bundle</option></select>
           </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+91 98765 43210">
-          </div>
-          <div class="form-group">
-            <label>Service Needed</label>
-            <select>
-              <option value="">Select a service</option>
-              <option>Website Building</option>
-              <option>Digital Marketing</option>
-              <option>AI Automation</option>
-              <option>All Services / Bundle</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Tell Us About Your Project</label>
-            <textarea placeholder="Briefly describe your project, goals, and timeline..."></textarea>
-          </div>
-          <button class="submit-btn" onclick="alert('Thanks! We\'ll be in touch within 24 hours. 🚀')">Send Message →</button>
+          <div class="form-group"><label>Tell Us About Your Project</label><textarea placeholder="Briefly describe your project, goals, and timeline..."></textarea></div>
+          <button class="submit-btn" onclick="handleSubmit()">Send Message →</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <a href="#" class="logo">Tech<span>X</span>elon</a>
-  <p>© 2026Techxelon. All rights reserved. · Hyderabad, India</p>
+  <p>© 2026 Techxelon. All rights reserved. · Hyderabad, India</p>
   <div class="footer-links">
     <a href="#services">Services</a>
     <a href="#why">About</a>
